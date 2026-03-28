@@ -60,28 +60,32 @@ button { padding: 10px 18px; margin-top: 10px; border: none; border-radius: 6px;
 <script>
 // FIXED STUDENT ACCOUNTS + RESULTS
 const students = {
-  "0001": {pass: "0002", name: "Nasteexo Arab Ali", results: [[0,0,0,0],[0,0,0,0],[10,10,20,0],[10,10,20,0]]},
-  "0002": {pass: "0004", name: "Ashwaaq Bashiir Abdi", results: [[10,10,20,41],[10,10,20,33],[10,10,20,32],[10,10,20,41]]},
-  "0035": {pass: "0070", name: "Abdifaah Ali Dahir", results: [[10,10,20,38],[10,10,20,40.5],[10,10,20,31],[10,10,20,47]]},
-  "0004": {pass: "0008", name: "Hoodo Bashir Abdi", results: [[10,10,18.75,20],[10,10,18.75,31],[10,10,20,13],[10,10,20,17]]},
-  "0005": {pass: "0010", name: "Aswaan Bashir Abdi", results: [[10,10,20,46],[10,10,17.5,36],[10,10,20,58],[10,10,20,41]]},
-  "0024": {pass: "0048", name: "Abdiqadir Abshir Hasan", results: [[10,10,20,21],[10,10,20,53],[10,10,20,58],[10,10,20,60]]},
-  "0021": {pass: "0042", name: "Ahmed Abdirisaq Jama", results: [[10,10,18.75,53],[10,10,20,48],[10,10,20,54],[10,10,20,54]]},
-  "0041": {pass: "0082", name: "Jama Abdirisaq Jama", results: [[10,10,20,56],[10,10,20,40.7],[10,10,20,48],[10,10,20,45]]},
-  "0009": {pass: "0018", name: "Adna Qasim Abdilahi", results: [[10,10,20,22],[10,10,16.25,42],[10,10,20,35],[10,10,20,44]]},
-  "0042": {pass: "0084", name: "Muscab Jibril Hassan", results: [[10,10,18.75,36],[10,10,20,39],[10,10,20,44],[10,10,18,58]]},
-  "0038": {pass: "0076", name: "Mushtaaq Mohomed Ali", results: [[10,10,18.75,59],[10,10,20,60],[10,10,20,60],[10,10,20,60]]},
-  "0039": {pass: "0078", name: "Nimco Abdi Ali", results: [[10,10,20,31],[10,10,15,0],[10,10,17,51],[10,10,20,29]]},
-  "0025": {pass: "0050", name: "Radwan H.saleban ibrahim", results: [[10,10,20,54],[10,10,20,51],[10,10,20,58],[10,10,20,49]]},
-  "0036": {pass: "0072", name: "Sihaam Abdirashid Jibril", results: [[10,10,20,0],[10,10,20,0],[10,10,20,0],[10,10,20,0]]},
-  "0033": {pass: "0066", name: "Yasmin Elmi Abdi", results: [[10,10,20,49],[10,10,20,46],[10,10,20,56],[10,10,20,50]]},
-  "0031": {pass: "0062", name: "Muna Mohamad Farah", results: [[10,10,20,0],[10,10,20,57],[10,10,20,54],[10,10,20,45]]},
-  "0064": {pass: "0128", name: "Abdikarim Mustafe Abdi", results: [[10,10,18,0],[10,10,20,31],[10,10,20,0],[10,10,20,46]]},
-  "0045": {pass: "0090", name: "Hamse Idiris Aidid", results: [[10,10,0,0],[10,10,0,0],[10,10,20,0],[10,10,20,0]]}
+  "0047": {pass: "0002", name: "Aamina Abdi Yousuf", results: [[10,10,24.5,37],[0,0,0,0],[10,10,20,0],[10,10,20,0]]},
+  "0057": {pass: "0004", name: "Umayma Mohamed Xasan", results: [[10,10,20,41],[10,10,20,33],[10,10,20,32],[10,10,20,41]]},
+  "0020": {pass: "0070", name: "Hodo Said Osman", results: [[10,10,20,38],[10,10,20,40.5],[10,10,20,31],[10,10,20,47]]},
+  "0011": {pass: "0008", name: "Nimco Mohamed Hassan", results: [[10,10,18.75,20],[10,10,18.75,31],[10,10,20,13],[10,10,20,17]]},
+  "0017": {pass: "0010", name: "Aragsan Muhiyadin Mohamed", results: [[10,10,20,46],[10,10,17.5,36],[10,10,20,58],[10,10,20,41]]},
+  "0016": {pass: "0048", name: "Nasra Farhan Habane", results: [[10,10,20,21],[10,10,20,53],[10,10,20,58],[10,10,20,60]]},
+  "0006": {pass: "0042", name: "Hodo Abdi Ahmed", results: [[10,10,18.75,53],[10,10,20,48],[10,10,20,54],[10,10,20,54]]},
+  "0043": {pass: "0082", name: "Hamda Mohamed Ahmed", results: [[10,10,20,56],[10,10,20,40.7],[10,10,20,48],[10,10,20,45]]},
+  "0039": {pass: "0078", name: "Ilhaan Nour Haybe", results: [[10,10,20,22],[10,10,16.25,42],[10,10,20,35],[10,10,20,44]]},
+  "0040": {pass: "0080", name: "Suhayb Hussein Ahmed", results: [[10,10,18.75,36],[10,10,20,39],[10,10,20,44],[10,10,18,58]]},
+  "0013": {pass: "0026", name: "Degan Mahdi Abdi", results: [[10,10,18.75,59],[10,10,20,60],[10,10,20,60],[10,10,20,60]]},
+  "0021": {pass: "0042", name: "Amal Omer Mohamed", results: [[10,10,20,31],[10,10,15,0],[10,10,17,51],[10,10,20,29]]},
+  "0074": {pass: "0148", name: "Amina Omer Egal", results: [[10,10,20,54],[10,10,20,51],[10,10,20,58],[10,10,20,49]]},
+  "0084": {pass: "0168", name: "Hamda Abdilahi Adan", results: [[10,10,20,0],[10,10,20,0],[10,10,20,0],[10,10,20,0]]},
+  "0014": {pass: "0028", name: "Siham Ismail Awale", results: [[10,10,20,49],[10,10,20,46],[10,10,20,56],[10,10,20,50]]},
+  "0022": {pass: "0044", name: "Fadxia Abdilahi Abib", results: [[10,10,20,0],[10,10,20,57],[10,10,20,54],[10,10,20,45]]},
+  "0083": {pass: "0166", name: "Hamda Abdirahman", results: [[10,10,18,0],[10,10,20,31],[10,10,20,0],[10,10,20,46]]},
+  "0023": {pass: "0046", name: "Bushra Yousuf Kahie", results: [[10,10,0,0],[10,10,0,0],[10,10,20,0],[10,10,20,0]]},
+  "0027": {pass: "0054", name: "Ugbad Abdirashid Ahmed", results: [[10,10,0,0],[10,10,0,0],[10,10,20,0],[10,10,20,0]]},
+  "0001": {pass: "0002", name: "Warda Haasan Jama", results: [[10,10,0,0],[10,10,0,0],[10,10,20,0],[10,10,20,0]]},
+  "0044": {pass: "0088", name: "Yaqub Abdiqadir Ahmed", results: [[10,10,0,0],[10,10,0,0],[10,10,20,0],[10,10,20,0]]},
+  "0012": {pass: "0024", name: "Salma Ibrahim Hussein", results: [[10,10,0,0],[10,10,0,0],[10,10,20,0],[10,10,20,0]]}
   
 };
 
-const courseNames = ["Computer-Sci", "Soft-ENG", "CyberSafe", "Networking"];
+const courseNames = ["M.S Nursing", "Soft-ENG", "CyberSafe", "Networking"];
 let currentStudent = null;
 
 // LOGIN FUNCTION
